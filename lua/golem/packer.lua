@@ -4,10 +4,11 @@ return require("packer").startup(function(use)
   use "wbthomason/packer.nvim"
 
   use {
-    "rose-pine/neovim",
-    as = "rose-pine",
+    "tanvirtin/monokai.nvim",
     config = function()
-      vim.cmd("colorscheme rose-pine")
+      require('monokai').setup({
+        palette = require('monokai').soda
+      })
     end
   }
 
