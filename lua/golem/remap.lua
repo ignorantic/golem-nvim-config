@@ -1,6 +1,5 @@
 -- Global mappings.
 vim.g.mapleader = " "
-vim.keymap.set("n", "<leader>pv", vim.cmd.Explore)
 
 -- Keymaps for better default experience
 -- See `:help vim.keymap.set()`
@@ -54,3 +53,6 @@ vim.keymap.set("n", "gD", vim.lsp.buf.type_definition, { desc = "Go to type defi
 -- Telescope
 vim.keymap.set("n", "<leader>ff", ":Telescope find_files<CR>", { desc = "Find files" })
 vim.keymap.set("n", "<leader>fg", ":Telescope live_grep<CR>", { desc = "Live grep" })
+
+-- UndoTree
+vim.keymap.set("n", "<leader>u", vim.cmd.UndotreeToggle)

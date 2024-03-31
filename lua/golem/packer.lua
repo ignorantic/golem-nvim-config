@@ -3,19 +3,11 @@ vim.cmd [[packadd packer.nvim]]
 return require("packer").startup(function(use)
   use "wbthomason/packer.nvim"
 
-  use {
-    "tanvirtin/monokai.nvim",
-    config = function()
-      require('monokai').setup({
-        palette = require('monokai').soda
-      })
-    end
-  }
+  use "tanvirtin/monokai.nvim"
 
   use {
     "nvim-telescope/telescope.nvim",
     tag = "0.1.6",
-    -- or, branch = "0.1.x",
     requires = { { "nvim-lua/plenary.nvim" } }
   }
 
@@ -68,16 +60,11 @@ return require("packer").startup(function(use)
     }
   }
 
-  use {
-    "folke/neodev.nvim",
-    opts = true,
-    config = function() require("neodev").setup({}) end
-  }
+  use "folke/neodev.nvim"
 
-  -- Useful plugin to show you pending keybinds.
-  use { "folke/which-key.nvim", opts = true }
+  use "folke/which-key.nvim"
 
-  use { "nvim-lualine/lualine.nvim", opts = true }
+  use "nvim-lualine/lualine.nvim"
 
   use "jose-elias-alvarez/typescript.nvim"
 
