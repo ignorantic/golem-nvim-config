@@ -1,1 +1,1 @@
-require("golem")
+require("config.init")

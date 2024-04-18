@@ -1,9 +1,9 @@
-local function isNvimTree()
-  return vim.bo.filetype == "NvimTree"
+local function isTree()
+  return vim.bo.filetype == "neo-tree"
 end
 
 local function isFile()
-  return vim.bo.filetype ~= "NvimTree" and vim.bo.filetype ~= "packer"
+  return vim.bo.filetype ~= "neo-tree"
 end
 
 require("lualine").setup({
@@ -24,13 +24,13 @@ require("lualine").setup({
     },
     lualine_c = {
       { "filename", cond = isFile },
-      { "progress", cond = isNvimTree }
+      { "progress", cond = isTree }
     },
     lualine_x = {
       { "encoding", cond = isFile },
       { "fileformat", cond = isFile },
       { "filetype", cond = isFile },
-      { "location", cond = isNvimTree }
+      { "location", cond = isTree }
     },
     lualine_y = {
       { "progress", cond = isFile }

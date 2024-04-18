@@ -1,5 +1,5 @@
 require('monokai').setup({
-  palette = require('monokai').soda
+ palette = require('monokai').soda
 })
 require("bufferline").setup({})
 require("mason").setup({})
