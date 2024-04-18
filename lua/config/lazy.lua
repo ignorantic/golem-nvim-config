@@ -15,10 +15,10 @@ require("lazy").setup({
   {
     "navarasu/onedark.nvim",
     config = function()
-      require('onedark').setup {
-        style = 'darker'
-      }
-      require('onedark').load()
+      require("onedark").setup({
+        style = "dark"
+      })
+      require("onedark").load()
     end
   },
 
